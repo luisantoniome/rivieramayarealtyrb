@@ -1,19 +1,19 @@
-<template>
-  <div>
-    <nuxt/>
-  </div>
+<template lang="pug">
+  div
+    rb-header
+    nuxt
+    rb-footer
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  box-sizing: border-box;
-}
+<script>
+  import RbHeader from '~/components/layout/Header.vue'
+  import RbFooter from '~/components/layout/Footer.vue'
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  export default {
+    components: { RbHeader, RbFooter }
+  }
+</script>
+
+<style lang="stylus">
+  @import('../assets/stylus/main')
 </style>
